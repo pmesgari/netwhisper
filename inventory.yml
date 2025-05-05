@@ -1,0 +1,18 @@
+devices:
+  - name: "switch1"
+    hostname: "172.20.20.3"
+    username: "admin"
+    password: "admin"
+    driver: "eos"
+  - name: "switch2"
+    hostname: "192.168.1.2"
+    username: "admin"
+    password: "admin"
+    driver: "eos"
+  - name: "switch3"
+    hostname: "localhost"
+    username: "admin"
+    password: "admin"
+    driver: "mock"
+    extra_args:
+      path: mocks

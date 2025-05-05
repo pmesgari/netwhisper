@@ -1,0 +1,45 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters": {
+        "default": {
+            "format": "%(message)s"
+        }
+    },
+    "handlers": {
+        "rich": {
+            "class": "rich.logging.RichHandler",
+            "formatter": "default",
+            "level": "INFO",
+            "markup": true,
+            "show_level": false,
+            "show_time": true
+        }
+    },
+    "loggers": {
+        "uvicorn": {
+            "handlers": ["rich"],
+            "level": "INFO",
+            "propagate": false
+        },
+        "uvicorn.error": {
+            "handlers": ["rich"],
+            "level": "INFO",
+            "propagate": false
+        },
+        "uvicorn.access": {
+            "handlers": ["rich"],
+            "level": "INFO",
+            "propagate": false
+        },
+        "netwhisper": {
+            "handlers": ["rich"],
+            "level": "INFO",
+            "propagate": false
+        }
+    },
+    "root": {
+        "handlers": ["rich"],
+        "level": "INFO"
+    }
+}

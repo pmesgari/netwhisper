@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netwhisper"
+version = "0.1.0"
+description = "CLI tool to interact with network devices using AI"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name="Payam Mesgari", email="you@example.com" }
+]
+dependencies = [
+    "napalm",
+    "questionary",
+    "openai",
+    "python-dotenv",
+    "console"
+]
+
+[project.scripts]
+netwhisper = "netwhisper.main:app"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+lint.extend-select = ["I"]  # Enables import sorting check

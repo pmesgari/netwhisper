@@ -1,0 +1,18 @@
+name: netwhisper-lab
+
+topology:
+  nodes:
+    sw01:
+      kind: arista_ceos
+      image: ceos:4.31
+      ports:
+        - 2222:22
+        - 8081:443
+    sw02:
+      kind: arista_ceos
+      image: ceos:4.31
+      ports:
+        - 2223:22
+        - 8082:443
+  links:
+    - endpoints: ["sw01:eth1", "sw02:eth1"]

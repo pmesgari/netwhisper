@@ -1,0 +1,4 @@
+interface {{ name }}
+{% if not switchport %}   no switchport{% endif %}
+{% if ip_address %}   ip address {{ ip_address }}{% endif %}
+{% if not shutdown %}   no shutdown{% else %}   shutdown{% endif %}
